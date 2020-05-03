@@ -9,6 +9,7 @@ set mysqldump="C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump"
 set databaseList=word sakila
 
 :: get date
+::date formate is dd-MM-yyyy
 for /f "tokens=1-3 delims=- " %%i in ("%date%") do (
 set day=%%i
 set month=%%j
