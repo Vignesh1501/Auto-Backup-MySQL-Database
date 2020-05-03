@@ -9,11 +9,10 @@ set mysqldump="C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump"
 set databaseList=word sakila
 
 :: get date
-for /f "tokens=1-4 delims=/ " %%i in ("%date%") do (
-     set dow=%%i
-     set month=%%j
-     set day=%%k
-     set year=%%l
+for /f "tokens=1-3 delims=- " %%i in ("%date%") do (
+set day=%%i
+set month=%%j
+set year=%%k
 )
 
 set dirName=%year%_%day%_%month%
